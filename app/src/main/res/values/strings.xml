@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Space Puzzle</string>
+    <string name="leave_temporarily">leave temporarily</string>
+    <string name="undo">Undo</string>
+    <string name="restart">Restart</string>
+    <string name="reminder_you_can_t_go_back_continuously">Reminder: You can’t go back continuously!</string>
+    <string name="current_score">Current score:</string>
+    <string name="highest_record">Highest record:</string>
+</resources>
