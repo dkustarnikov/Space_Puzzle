@@ -4,66 +4,87 @@
     android:layout_height="match_parent"
     android:background="@drawable/background">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_space_puzzle"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
+
     <LinearLayout
         android:id="@+id/topPanel"
+        android:layout_below="@id/logo"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_margin="20dp"
-        android:orientation="horizontal" >
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp">
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:background="@null"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:text="@string/current_score"
-                android:textColor="#FF0000"
-                android:gravity="center" />
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/Score"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:textColor="#FF0000"
-                android:gravity="center_vertical" />
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:background="@null"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/maxtv"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:text="@string/highest_record"
-                android:textColor="#FF0000"
-                android:gravity="center" />
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/maxScore"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:textColor="#FF0000"
-                android:gravity="center_vertical" />
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
             <ImageView
                 android:id="@+id/share"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/share"/>
+                android:src="@drawable/share" />
 
         </LinearLayout>
 
@@ -83,7 +104,7 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:background="#87CEEB"
+            android:background="@drawable/round_button"
             android:text="@string/restart" />
 
 
@@ -94,7 +115,7 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:background="#87CEEB"
+            android:background="@drawable/round_button"
             android:text="@string/undo" />
 
         <Button
@@ -104,7 +125,7 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:background="#87CEEB"
+            android:background="@drawable/round_button"
             android:text="@string/leave_temporarily" />
 
     </LinearLayout>
@@ -115,7 +136,9 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/bottomPanel"
         android:text="@string/reminder_you_can_t_go_back_continuously"
-        android:textColor="#FF00FF"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:layout_centerHorizontal="true"/>
 
     <com.spacepuzzle.GameView
@@ -123,6 +146,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/topPanel"
+        android:layout_marginBottom="20dp"
         android:layout_above="@+id/tip" />
 
 </RelativeLayout>
