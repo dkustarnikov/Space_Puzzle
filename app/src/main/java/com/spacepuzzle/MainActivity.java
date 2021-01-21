@@ -10,18 +10,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
     public static MainActivity mainActivity = null;
     private TextView Score;
-    public static int score = 0;//当前得分
+    private TextView ScoreTextView;
+    public static int score = 0;
     private TextView maxScore;
     private ImageView share;
     private Button restart;
     private Button back;
     private Button pause;
     private GameView gameView;
+
+    private ImageView logoImageView;
 
     public MainActivity() {
         mainActivity = this;
@@ -31,6 +35,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ScoreTextView = findViewById(R.id.tv);
+        ScoreTextView.setAlpha(0.5f);
+
+
+
 
         Score = (TextView) findViewById(R.id.Score);
         maxScore = (TextView) findViewById(R.id.maxScore);

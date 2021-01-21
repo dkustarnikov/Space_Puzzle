@@ -39,7 +39,8 @@
                 android:text="@string/current_score"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold" 
+                android:textFontWeight="500"/>
 
             <TextView
                 android:id="@+id/Score"

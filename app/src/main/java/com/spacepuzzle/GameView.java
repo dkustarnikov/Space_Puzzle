@@ -36,7 +36,6 @@ public class GameView extends GridLayout {
         initGameView();
     }
 
-    //初始化游戏布局
     private void initGameView() {
         setRowCount(4);
         setColumnCount(4);
@@ -53,7 +52,6 @@ public class GameView extends GridLayout {
 
     }
 
-    //初始化卡片
     private void addCards(int cardWidth, int cardHeight) {
         this.removeAllViews();
         Card c;

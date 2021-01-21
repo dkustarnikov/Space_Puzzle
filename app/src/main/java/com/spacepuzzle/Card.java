@@ -18,8 +18,9 @@ public class Card extends FrameLayout {
         lable.setBackgroundDrawable(getResources().getDrawable(R.drawable.card_background));
         lable.setGravity(Gravity.CENTER);
         LayoutParams lp = new LayoutParams(-1, -1);
+        lp.gravity = 16; //Gravity = center_vertical
 
-        lp.setMargins(35, 35, 0, 0);
+        lp.setMargins(10, 10, 0, 0);
         addView(lable, lp);
         setNum(0);
     }
